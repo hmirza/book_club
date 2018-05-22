@@ -1,0 +1,337 @@
+
+.overlay_base {
+    display: none; /* Start out hidden, we'll dynamically enable it later. */
+
+    /* Full-window container ... */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* ... floating above everything else ... */
+    z-index: 2;
+
+    /* ... with partial transparency,
+           to make everything else look greyed out */
+    background-color: rgba(0,0,0,0.5);
+
+    /* Flex options for child objects */
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay_inner {
+    display: flex;
+    position: absolute;
+    /*Might need to adjust the size to fit all the content*/
+    width: 50%;
+    height: 30%;
+    background-color: rgb(255,255,255); /* Must set the background color here,
+				otherwise it inherits from the parent */
+    position: relative;
+
+}
+
+/* Not covered in Discussion: force the close button into
+              the upper-right corner of it's parent container */
+.overlay_button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#id_overlay_inner {
+    display: flex;
+    flex-direction: row;
+    padding: 35px;
+    width: 655px;
+    height: 490px;
+}
+
+
+#right_arrow{
+    display:flex;
+   background-color: transparent;
+    border: 3px solid #e7e7e7;
+    color: white;
+    padding: 5px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 70px;
+    border-radius: 12px;
+    margin-left: 30px;
+
+
+}
+#left_arrow{
+    display:flex;
+    background-color: transparent;
+    border: 3px solid #e7e7e7;
+    color: white;
+    padding: 5px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 70px;
+    border-radius: 12px;
+    margin-right: 30px;
+
+}
+#exit{
+    position:absolute; top:0; right:0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 50px;
+    margin: 40px 40px;
+
+
+}
+
+
+
+#keep_div {
+    display:block;
+    position: absolute;
+    top:85%;
+
+
+}
+#keep{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: Raleway, sans-serif;
+}
+
+
+#prompt{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding-top: 50px;*/
+    padding-left: 125px;
+    color:black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+
+
+}
+#items{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    /* padding-top: 50px; */
+    justify-content: center;
+    justify-content: space-evenly;
+    color:#FF595F;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    padding-bottom: 2%;
+
+}
+
+
+#author_items{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+
+
+
+}
+/*Havent figured out how to do the or's yet*/
+.or{
+    display: flex;
+    align-items: baseline;
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+#title_items{
+
+    display: flex;
+    flex-direction: column;
+
+}
+#isbn_items{
+
+    display: flex;
+    flex-direction: column;
+
+}
+#BC_items{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 10;
+    justify-content: left;
+    /* padding:2%; */
+    padding-left: 40px;
+    color:#FF595F;
+    /* top:40%; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+
+}
+button{
+    display: flex;
+    align-items: center;
+}
+
+#search_items{
+    display: flex;
+    justify-content: center;
+}
+
+#search{
+    background-color: #FF595F; /* Green */
+    border: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: Raleway, sans-serif;
+
+
+
+}
+
+input[type=text] {
+    border: 1px solid red;
+    border-radius: 15px;
+    width: 400px;
+    height: 70px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-family: Raleway, sans-serif;
+    font-weight: light
+
+}
+
+}
+
+img{
+
+  width: 100%;
+  height: auto;
+
+
+}
+ #thumbnail_inner_overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200%;
+    height: 100%;
+}
+}
+#id_second_container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+
+}
+#title_inner_overlay{
+    display: flex;
+
+    padding: 15px;
+    /*padding-top: 2px;*/
+    margin-left: 15px;
+    font-family: Raleway, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+
+    justify-content: flex-start;
+
+
+
+}
+#author_inner_overlay{
+    display: flex;
+    justify-content: center;
+    font-weight: light;
+    padding: 15px;
+    margin-left: 15px;
+    font-family: Raleway, sans-serif;
+    font-size: x-large;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
+#description_inner_overlay{
+
+    display: flex;
+    flex-direction: row;
+    order: 99;
+    padding: 12px;
+    margin-left: 15px;
+    /*justify-content: space-between;*/
+    color:black;
+    font-family: Raleway, sans-serif;
+    font-weight: light;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: x-large;
+    line-height: 1.5;
+
+
+}
+/*//code for the X in the overlay #x24E7
+
+#thumbnail_inner_overlay{
+    flex:1;
+} */

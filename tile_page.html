@@ -1,0 +1,130 @@
+<!doctype HTML>
+
+<HTML>
+<HEAD>
+    <TITLE>ECS 162 Overlay Demo</TITLE>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="tile_page.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</HEAD>
+
+<BODY  onload="user_request('1');">
+    <div class="overlay_base_2" id="overlay2">
+        <!-- <button class="class_exit" type="button" onClick=""> ⓧ </button> -->
+
+    <div>
+        <br>
+    <div id='message_2'>
+        <div class="lines">
+        The book Title by Author or
+    </div>
+    <div id="isbn_13" class="lines">
+        ISBN number
+    </div>
+
+    <div id= "isbn_12" class="lines2" >
+        000-0-00-0000000
+    </div>
+
+
+
+    <div class="lines">
+        Could not be found
+    </div>
+<br><br>
+    <div class = "lines">
+
+        Try another search.
+    </div>
+
+
+    </div>
+
+<br>
+    <div class="search_again_button">
+        <button id="ok" type="button" onClick="HideOverlay2();">OK</button>
+    </div>
+    </div>
+
+
+
+    </div>
+
+    <div class="overlay_base" id="overlay">
+
+
+        <button id="exit" class="class_exit" type="button" onClick="HideOverlay()"> ⓧ </button>
+        <button id="left_arrow" type="button" onClick="arrow('left');">&larr;</button>
+
+        <div class="overlay_inner" id="id_overlay_inner">
+        </div>
+        <button id="right_arrow" type="button" onClick="arrow('right');">&rarr;</button>
+
+        <div id="keep_div">
+        <button id="keep" onClick="NewTile();" type="button">Keep</button>
+    </div>
+    </div>
+
+
+
+
+
+
+
+<div id="header">
+
+<div>
+<div id="BC_items">
+        BOOK CLUB
+</div>
+<br>
+</div>
+
+<div id="items" class="container">
+
+
+    <div id="author_items">
+    <div>Author</div>
+    <input type="text" id="author" placeholder="ex William Shakespeare">
+    </div>
+
+
+    <div id="title_items">
+    <div>Title</div>
+    <input type="text" id="title" placeholder="ex Romeo and Juliet">
+
+    </div>
+
+    <div id="isbn_items">
+    <div>ISBN</div>
+    <input type="text" id="ISBN" placeholder="ex 000-0-00-000000-0">
+    </div>
+
+    <div><br>
+    <div id="search_items" class = "items_search">
+        <button type="button" id = "search" onClick="user_request();">Search</button>
+    </div>
+    </div>
+
+
+</div>
+</div>
+
+
+<div id="tile_region">
+<div id="border_tile_region">
+<!-- TILES MUST GO HERE -->
+
+
+</div>
+</div>
+
+<script type="text/javascript" src="bookList.js"></script>
+
+</BODY>
+</HTML>

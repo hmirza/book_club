@@ -1,0 +1,93 @@
+<!doctype HTML>
+
+<HTML>
+<HEAD>
+    <TITLE>ECS 162 Overlay Demo</TITLE>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="bookList.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</HEAD>
+
+<BODY>
+
+<!-- <div class="overlay_base" id="overlay">
+    <button id="exit" type="button" onClick="HideOverlay()"> ⓧ </button>
+    <button id="left_arrow" type="button" onClick="user_hits_arrow('left');">&larr;</button>
+
+    <div class="overlay_inner" id="id_overlay_inner">
+    </div>
+    <button id="right_arrow" type="button" onClick="user_hits_arrow('right')">&rarr;</button>
+
+    <div id="keep_div">
+    <button id="keep" type="button">Keep</button>
+</div>
+</div> -->
+
+<!-- <button type="button" onClick="ShowOverlay();">Overlay!</button> -->
+<!-- <button type="button" onClick="GetNeuromancer();">Neuromancer?</button> -->
+
+
+
+<div id="BC_items">
+    BOOK CLUB
+    </div>
+
+
+    <br><br>
+
+ <div id = "prompt">
+  Search for a book by...
+</div>
+
+<div id="items" class="container">
+
+
+    <div id="author_items">
+    <label for="author">Author</label>
+    <input type="text" id="author" placeholder="ex William Shakespeare">
+    </div>
+
+    <div class='or'>or</div>
+
+    <!-- <button type="button" onClick="LogContents('input0');">Go!</button> -->
+    <!-- <br> -->
+    <div id="title_items">
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="ex Romeo and Juliet">
+
+    </div>
+    <div class='or'>or</div>
+
+
+    <!-- <button type="button" onClick="LogContents('input1');">Go!</button> -->
+    <!-- <br> -->
+    <div id="isbn_items">
+    <label  for="ISBN">ISBN</label>
+    <input type="text" id="ISBN" placeholder="ex 000-0-00-000000-0">
+    </div>
+
+    <!-- <button type="button" onClick="LogContents('input1');">Go!</button> -->
+    <!-- <br> -->
+
+</div>
+</div>
+
+<br><br>
+
+<div id="search_items" class = "items_search">
+    <button type="button" id = "search" onclick="landing_page_redirect();">Search</button>
+</div>
+
+
+
+
+<script type="text/javascript" src="bookList.js"></script>
+
+</BODY>
+
+</HTML>
